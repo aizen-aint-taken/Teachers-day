@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day</title>
+   <style>
+    /* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    display: flex;            /* Use flexbox for centering */
+    align-items: center;      /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    height: 100vh;           /* Full height of viewport */
+}
+
+.greeting-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+/* Hide the message content initially */
+.message-content {
+    display: none;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #4caf50;
+    font-size: 2.5em;
+}
+
+p {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.greeting-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.show-message-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.show-message-button:hover {
+    background-color: #388e3c;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .greeting-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .greeting-image img {
+        width: 100%;
+    }
+}
+
+   </style>
+</head>
+<body>
+    <div class="greeting-container">
+        <button id="showMessageButton" class="show-message-button">Click Here Please :)</button>
+        <div id="messageContent" class="message-content">
+            <h1>Happy Teacher's Day!</h1>
+            <p>Happy Teachers' Day to all faculty and staff at Maharlika National High School! Your dedication, passion, and patience inspire us every day. You not only impart knowledge but also shape the future with your wisdom and guidance. Thank you for making a difference in the lives of so many and for being the guiding light that helps students reach their full potential. Wishing you joy, respect, and appreciation today and always!</p>
+        </div>
+    </div>
+<script>
+    document.getElementById('showMessageButton').addEventListener('click', function() {
+    const messageContent = document.getElementById('messageContent');
+    messageContent.style.display = 'block';
+    this.style.display = 'none'; 
+});
+
+</script>
+</body>
+</html>
